@@ -15,7 +15,18 @@ public class StringManipulation {
 
 	/*Method 1 - When given a String, count and return 
 	 how many words there are in that String. */
-	
+	static int returnLengthOfString (String myString) {
+		int counter = 0;
+		ArrayList<String> myWords = new ArrayList<>();
+		String[] split = myString.split(" ");
+		
+		for (String word : split) {
+			myWords.add(word);
+			counter += 1;
+		}
+
+		return counter;
+	}
 	
 	/* Method 2 - When given a String, print out this String in a vertical 
 	 fashion, each word on a different line.*/
@@ -48,7 +59,7 @@ public class StringManipulation {
 		String concatPhrase = (phrase1 + ", " + phrase2).toUpperCase();
 		System.out.println(concatPhrase);
 		
-		//System.out.println(returnLengthOfString(concatPhrase)); 
+		System.out.println(returnLengthOfString(concatPhrase)); 
 		
 	}
 
