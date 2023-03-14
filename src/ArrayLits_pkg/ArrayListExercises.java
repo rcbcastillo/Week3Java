@@ -50,7 +50,7 @@ public class ArrayListExercises {
 		
 		
 		arrayListInt.set(2, 250);
-		System.out.println("New value of index 0: " + arrayListInt.get(2));
+		System.out.println("New value of index 2: " + arrayListInt.get(2));
 		
 		
 		// remove() elements
