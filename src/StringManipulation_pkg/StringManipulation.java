@@ -30,7 +30,15 @@ public class StringManipulation {
 	
 	/* Method 2 - When given a String, print out this String in a vertical 
 	 fashion, each word on a different line.*/
-	
+	static void printStringVertically (String myString) {
+		
+		String[] split = myString.split(" ");
+		
+		for (String word : split) {
+			System.out.println(word);
+		
+		}
+	}
 	
 	
 	/* Method 3 - When given a String, print out this String in a vertical 
@@ -59,7 +67,8 @@ public class StringManipulation {
 		String concatPhrase = (phrase1 + ", " + phrase2).toUpperCase();
 		System.out.println(concatPhrase);
 		
-		System.out.println(returnLengthOfString(concatPhrase)); 
+		System.out.println(returnLengthOfString(concatPhrase));
+		printStringVertically(concatPhrase);
 		
 	}
 
