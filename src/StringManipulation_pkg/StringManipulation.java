@@ -43,12 +43,26 @@ public class StringManipulation {
 	
 	/* Method 3 - When given a String, print out this String in a vertical 
 	 fashion in reverse order, each word on a different line.*/
+	static void printStringInReverseVertically (String myString) {
+		
+		ArrayList<String> myWords = new ArrayList<>();
+		String[] splitedString = myString.split(" ");
+		
+		for (String word : splitedString) {
+			myWords.add(word);
+		}
+		
+		for (int item = myWords.size() -1; item >=0; item--) {
+			System.out.println(myWords.get(item));
+		}
+	}
 	
 	/* Method 4 - A find method, which takes 2 Strings; 
 	 the first is message and the second is the String you want to find 
 	 in the message. A boolean value should be returned to indicate 
 	 whether or not the second String has been found in the message.
 	 */
+	
 	public static void main(String[] args) {
 		
 		/* 1 Create two Strings where one string has a value of “yesterday
@@ -61,14 +75,17 @@ public class StringManipulation {
 		Now use the substring method to print out: `TODAY IT IS RAINING`
 		Solution
 		 */
-		
+		System.out.println(" << Concatenating two strings >>");
 		String phrase1 = "yesterday it was raining";
 		String phrase2 = "today it is sunny";
 		String concatPhrase = (phrase1 + ", " + phrase2).toUpperCase();
 		System.out.println(concatPhrase);
-		
+		System.out.println(" << Number of words in string >>");
 		System.out.println(returnLengthOfString(concatPhrase));
+		System.out.println(" << Printing each word in string vertically >>");
 		printStringVertically(concatPhrase);
+		System.out.println(" << Printing each word in string in reverse >>");
+		printStringInReverseVertically(concatPhrase);
 		
 	}
 
