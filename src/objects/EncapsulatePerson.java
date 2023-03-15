@@ -1,5 +1,7 @@
 package objects;
 
+
+
 public class EncapsulatePerson {
 	// Create a Person class modelling name, age and job title variables
 	//instance variables
@@ -31,5 +33,8 @@ public class EncapsulatePerson {
 	public void setName (String newName) {
 		this.name = newName;
 	}
+	
+	
+	
 
 }
