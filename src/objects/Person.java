@@ -7,6 +7,7 @@ public class Person {
 	public int age;
 	public String job_title;
 	
+	
 	//Create a method to return all three of these in a formatted string.
 	// using the default constructor
 	public Person (String name, int age, String job_title) {
@@ -15,6 +16,10 @@ public class Person {
 		this.job_title = job_title;
 	}
 	
-	
+	//Create a method to return all three of these in a formatted string.
+	public String formattedString() {
+		String data = ("Name is: " + this.name +","+ " age is: " + this.age +","+ " job_title is: " + this.job_title);
+		return data;
+	}
 
 }
