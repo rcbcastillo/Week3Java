@@ -29,8 +29,15 @@ public class Main {
 		System.out.println(person3.formattedString());
 		
 		// Printing the number of objects in myListOfObjects
-		for (Person objectName : myListOfObjects)
-			System.out.println(objectName);
+		for (Person objectName : myListOfObjects) {
+			System.out.println(objectName.formattedString());
+		}
+	
+		// Printing an object if the name exists
+		for (Person objectName : myListOfObjects) {
+			if (objectName.name.equalsIgnoreCase("AS")) {
+				System.out.println(objectName.formattedString());
+			}
+		}
 	}
-
 }
