@@ -63,6 +63,22 @@ public class StringManipulation {
 	 whether or not the second String has been found in the message.
 	 */
 	
+	static void isSubstringInString (String message, String mySubstring) {
+		;
+		String subStr = "";
+		
+		for (int idx=0; idx < message.length(); idx++) {
+			char currentChar = message.charAt(idx);
+			System.out.println(currentChar);
+			
+			for (int j=0; j < message.length(); j++) {
+				char currentChar2 = mySubstring.charAt(j);
+	
+			}
+		}
+		
+	}
+	
 	public static void main(String[] args) {
 		
 		/* 1 Create two Strings where one string has a value of “yesterday
@@ -86,6 +102,9 @@ public class StringManipulation {
 		printStringVertically(concatPhrase);
 		System.out.println(" << Printing each word in string in reverse >>");
 		printStringInReverseVertically(concatPhrase);
+		System.out.println(" << Check if substring is in original message >>");
+		isSubstringInString(concatPhrase, "each word");
+		isSubstringInString(concatPhrase, "it is sunny");
 		
 	}
 
