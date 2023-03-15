@@ -1,5 +1,6 @@
 package Main;
 import objects.Person;
+import objects.EncapsulatePerson;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,5 +40,19 @@ public class Main {
 				System.out.println(objectName.formattedString());
 			}
 		}
+		
+		// Printing the created instances
+		EncapsulatePerson person4 = new EncapsulatePerson("Anne", 38, "Customer Service");
+				
+		EncapsulatePerson person5 = new EncapsulatePerson("RB", 39, "Ciber Security Chief");
+		
+		EncapsulatePerson person6 = new EncapsulatePerson("JB", 37, "Accountant");
+	
+		
+		System.out.println(person4.formattedString() + "person 4");
+		System.out.println(person4.getName() + " <-- Old name of person 4");
+		person4.setName("Harry");
+		System.out.println(person4.getName() + " <-- New name of person 4");
+	
 	}
 }
