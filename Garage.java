@@ -31,15 +31,30 @@ public class Garage {
 			
 		}
 	}
+		
+	/*Garage should have methods that add a Vehicle, 
+	 * remove a Vehicle by its ID or its type, 
+	 * fix a Vehicle (which calculates the bill) 
+	 * and to empty the Garage..*/
 	
-	
-	
-	/*Create a method in Garage that iterates through each Vehicle, 
-	calculating a bill for each type of Vehicle in a different way,
-	depending on the type of Vehicle it is 
-	(this does not need to be complex).*/
-	
-	
-
+	/*Garage should have a method 
+	 * to remove multiple Vehicles by their type*/
+	public void removeVehicle(String myClass) {
+		//Creating a temporary list
+		List<Vehicle> itemsToRemove = new ArrayList<>();
+		for (Vehicle item: new ArrayList<>(this.vehicles)) {
+			String currentItemClass = (item.getClass().getSimpleName());
+			
+			if ((currentItemClass.endsWith(myClass))) {
+				itemsToRemove.add(item);
+			}
+		}
+		
+		for (Vehicle item: itemsToRemove) {
+			System.out.println(item);
+		}
+		// removing items corresponding to myClass
+		this.vehicles.removeAll(itemsToRemove);
+	}
 
 }
