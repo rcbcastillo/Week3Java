@@ -40,7 +40,7 @@ public class Garage {
 	/*Garage should have a method 
 	 * to remove multiple Vehicles by their type*/
 	public void removeVehicle(String myClass) {
-		//Creating a temporary list
+		//creating a temporary list
 		List<Vehicle> itemsToRemove = new ArrayList<>();
 		
 		for (Vehicle item: this.vehicles) {
