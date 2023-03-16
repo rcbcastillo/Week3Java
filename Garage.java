@@ -42,7 +42,8 @@ public class Garage {
 	public void removeVehicle(String myClass) {
 		//Creating a temporary list
 		List<Vehicle> itemsToRemove = new ArrayList<>();
-		for (Vehicle item: new ArrayList<>(this.vehicles)) {
+		
+		for (Vehicle item: this.vehicles) {
 			String currentItemClass = (item.getClass().getSimpleName());
 			
 			if ((currentItemClass.endsWith(myClass))) {
@@ -50,11 +51,15 @@ public class Garage {
 			}
 		}
 		
-		for (Vehicle item: itemsToRemove) {
-			System.out.println(item);
-		}
 		// removing items corresponding to myClass
 		this.vehicles.removeAll(itemsToRemove);
 	}
+
+	@Override
+	public String toString() {
+		return "Garage [vehicles=" + vehicles + "]";
+	}
+	
+	
 
 }
