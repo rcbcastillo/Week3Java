@@ -1,5 +1,7 @@
 package FlowchartReplaceWhile;
 
+import java.util.Scanner;
+
 public class ReplaceWhileLoops {
 	static void print10Times() {
 		System.out.println("Print 10X from 1-10");
@@ -9,6 +11,21 @@ public class ReplaceWhileLoops {
 				System.out.println(j);
 			}
 		}
+	}
+	
+	static void print10TimesWithUserInput() {
+		System.out.println("Print xTimes from 1-10");
+		Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+	    System.out.println("Enter a number: ");
+	    String userInput = myObj.nextLine();
+	    int number = Integer.parseInt(userInput);
+		for (int i = 1; i < number + 1; i++) {
+			System.out.println("This is the : " + i + "X" );
+			for (int j = 1; j <= 10; j++) {
+				System.out.println(j);
+			}
+		}
+		myObj.close();
 	}
 	
 	public static void main(String[] args) {
@@ -32,8 +49,8 @@ public class ReplaceWhileLoops {
 			}
 		}
 		
-		// calling function print10Times
+		// calling functions
 		print10Times();
-		
+		print10TimesWithUserInput();		
 	}
 }
